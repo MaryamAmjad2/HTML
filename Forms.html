@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+   <h3>Forms Practice</h3>
+    <hr width="80%" ></hr>
+    <form action="form.php" method="get">
+
+    <div>
+        Name:<input type="text">
+   
+    </div> </br>
+    <div>
+        Gender:<input type="radio" name="Gender"> Male</input>
+        
+        <input type="radio" name="Gender" checked="checked"> Female</input>
+   
+    </div>
+    <br>
+    <div>
+        Password:<input type="password" required>
+    </div>  <br>
+ <div>
+Email: <input type="email" required>
+ </div>  <br>
+        <div>
+            Education:
+            <select name="edu">
+                <option>Matriculation</option>
+                <option>Intermediate</option>
+                <option>Bachelors</option>
+                <option>Masters</option>
+                <option>PHD</option>
+            </select>
+        </div>  <br>
+        <div>
+            Date of Birth: <input type="date">
+        </div>  <br>
+        <div>
+            No of Cars:<input type="number" required>
+        </div><br>
+
+        <div>
+            Cars You have driven :</br><input type="checkbox" >AUDI</input>
+            <br><input type="checkbox" >Jaguar</input>
+            <br><input type="checkbox" >GTR</input>
+        </div><br>
+        <div>
+           Write Something About Yourself: </br>
+           <textarea cols="30" rows="10"></textarea>
+        </div>
+        
+        <input type="submit">
+        <input type="reset">
+    </form>
+    
+</body>
+</html>
