@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Instruments</title>
+    <style>
+        body{
+            background-image:url("Music.jpg") ;
+            background-repeat: no-repeat;
+            background-position: right top;
+            
+            
+       
+    }
+    .container{
+   
+        width: 500px;
+        height: 500px;
+        position: relative;
+       
+    }
+        .music{
+            width: 200%;
+            height:50%;
+            position: absolute;
+            top:60%;
+            left:50%;
+            margin:50px;
+            
+       
+        }
+        .key{
+            display: inline;
+        }
+        button{
+            background-color: transparent;
+            width: 60px;
+            height: 50px;
+            padding: auto;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: 300;
+            margin: 20px;
+            border-radius: 12px;
+           
+        }
+        button:hover{
+            background-color: rgb(120, 188, 240);
+            border-color: white;
+           
+            
+        }
+    </style>
+</head>
+<body >
+    <div class="container">
+        
+        <div class="music">
+            <div  data-key="65" class="key">
+            <button >A</button>
+        </div>
+            <div data-key="83" class="key">
+                <button >s</button>
+            </div>
+            <div data-key="68" class="key">
+            <button >D</button>
+        </div>
+            <div data-key="70" class="key">
+            <button >F</button>
+        </div>
+            <div  data-key="71"class="key">
+            <button >G</button>
+        </div>
+            
+
+    </div>
+    <audio data-key="65"src="Sounds/game.wav"></audio>
+    <audio data-key="83"src="Sounds/drum.wav"></audio>
+    <audio data-key="68"src="Sounds/flute.wav"></audio>
+    <audio data-key="70"src="Sounds/guitar.wav"></audio>
+    <audio data-key="71"src="Sounds/piano.wav"></audio>
+    <audio data-key="71"src="Sounds/violin.wav"></audio>
+   
+  <script>
+    window.addEventListener("keydown",function (e){
+      const audio=document.querySelector(`audio[data-key="${e.keyCode}"]`)
+ 
+ audio.currentTime=0;
+ audio.play();
+
+
+    });
+  </script>  
+</body>
+</html>
